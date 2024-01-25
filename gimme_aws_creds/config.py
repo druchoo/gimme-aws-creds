@@ -403,7 +403,7 @@ class Config(object):
         self._okta_auth_server = okta_auth_server
 
         return okta_auth_server
-    
+
     def _get_enable_keychain(self, default_entry):
         """ enable the use of the system keychain to store the user's password """
 
@@ -523,7 +523,7 @@ class Config(object):
         cred_profile = self._get_user_input(
             "AWS Credential Profile", default_entry)
 
-        if cred_profile.lower() in ['default', 'role', 'acc', 'acc-role']:
+        if cred_profile.lower() in ['default', 'role', 'acc-role', 'acc']:
             cred_profile = cred_profile.lower()
 
         return cred_profile
